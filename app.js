@@ -12,7 +12,7 @@ const server = http.createServer(app);
 // Set up Socket.io with CORS configuration
 const io = new Server(server, {
   cors: {
-    origin: "https://leader-board-9hm2.vercel.app/", // Allow requests from this origin (your React frontend)
+    origin: "https://leader-board-9hm2.vercel.app", // Allow requests from this origin (your React frontend)
     methods: ["GET", "POST"], // Allowed methods for Socket.io
     allowedHeaders: ["Content-Type", "Authorization"], // Allowed headers
     credentials: true // Whether credentials (cookies, etc.) should be sent
@@ -24,7 +24,7 @@ app.set('io', io);
 
 // Middleware
 app.use(cors({
-  origin: 'https://leader-board-9hm2.vercel.app/',
+  origin: 'https://leader-board-9hm2.vercel.app',
   methods: ["GET", "POST"], 
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true 
