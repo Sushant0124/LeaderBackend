@@ -52,6 +52,11 @@ app.use((err, req, res, next) => {
   res.status(500).json({ message: 'Internal Server Error' });
 });
 
+//backend response
+app.get('/',()=>{
+  res.json("Welcome to LeaderBoard Backend");
+}
+
 // Graceful shutdown
 process.on('SIGINT', async () => {
   await mongoose.connection.close();
