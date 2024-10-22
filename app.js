@@ -24,7 +24,7 @@ app.set('io', io);
 
 // Middleware
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: 'https://leader-board-9hm2.vercel.app/',
   methods: ["GET", "POST"], 
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true 
