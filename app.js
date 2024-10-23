@@ -49,7 +49,7 @@ io.on('connection', (socket) => {
 //backend response
 app.get('/',(req,res)=>{
   res.send("Welcome to LeaderBoard Backend,Please use my frontend url to check backend functionality");
-}
+});
 
 // Global error handler
 app.use((err, req, res, next) => {
