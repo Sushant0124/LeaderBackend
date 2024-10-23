@@ -46,16 +46,18 @@ io.on('connection', (socket) => {
   });
 });
 
+//backend response
+app.get('/',(req,res)=>{
+  res.send("Welcome to LeaderBoard Backend,Please use my frontend url to check backend functionality");
+}
+
 // Global error handler
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).json({ message: 'Internal Server Error' });
 });
 
-//backend response
-app.get('/',()=>{
-  res.json("Welcome to LeaderBoard Backend");
-}
+
 
 // Graceful shutdown
 process.on('SIGINT', async () => {
